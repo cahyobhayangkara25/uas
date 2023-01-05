@@ -1,0 +1,52 @@
+*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package percabangan;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author LENOVO
+ */
+public class projectuas {
+     public static void main(String[] args) {
+         String nim,nama,prodi;
+         Scanner masukan = new Scanner(System.in);
+         
+         System.out.println("masukan nim = ");
+         nim = masukan.nextLine() ;
+         System.out.println("masukan nama = ");
+         nama = masukan.nextLine () ;
+        
+         System.out.println("nim = "+ nim);
+         System.out.println("nama = "+ nama);
+        
+          prodi = nim.substring(3, 5);
+         switch (prodi) {
+             case "52":
+                 System.out.println("program studi = s1 teknologi informasi");
+                 break;
+             case "51":
+                 System.out.println("program studi = s1 sistem informasi");
+                 break;
+             case "31":
+                 System.out.println("program studi = d3 sistem informasi");
+                 break;
+             default:
+                 System.out.println("prodi tdk");
+                 break;
+         }
+         
+         //no urut
+         
+          String[] urut = nim.split("\\.");
+          System.out.println("nomor urut masuk : " + Integer.valueOf(urut[2]));
+          
+           System.out.println("tahun ajaran baru : 20" + nim.substring(0, 2) );
+          
+          System.out.print("apakah anda ingin memasukan data lagi : [ya/tidak] ");
+          
+     }
+}
